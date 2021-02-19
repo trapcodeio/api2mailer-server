@@ -17,7 +17,7 @@ It takes in nodemailer's `sendMail` data via post request and sends the mail on 
 
 - clone this repo
 - run `npm install` or `yarn install`
-- run `node api2mailer cli @ makeConfig` (Create env.json)
+- run `node api2mailer cli @makeConfig` (Creates env.json)
 
 Env.json Example:
 
