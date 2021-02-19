@@ -50,12 +50,14 @@ module.exports = {
       
     } else {
       
-      const info = await Transporter.sendMail(mail);
-      
-      ReportProgress(mail, info);
-      
-      return http.send({info});
-      
+      try {
+        const info = await Transporter.sendMail(mail);
+        ReportProgress(mail, info);
+        return http.send(info);
+      } catch (e) {
+        console.error(e);
+        return http.send({error: e.message});
+      }
     }
   },
 };
