@@ -1,6 +1,6 @@
 # Api2Mailer
 
-This package enables you to test online smtp/mailer functionality from localhost without changing nodemailer's Api.
+This package enables you to test remote `smtp/mailer` functionality from localhost without changing nodemailer's Api.
 
 ## What is included?
 - A web server. (This Repo)
@@ -38,7 +38,7 @@ Env.json Example:
 ```shell
 node app
 # OR using pm2
-pm2 start app.js
+pm2 start api2mailer.js
 ```
 This will start a server at `http://localhost:2222` or using your desired port.
 
@@ -56,4 +56,4 @@ const transporter = nodemailer.createTransport({/* Transporter Settings */})
 await transporter.sendMail({/* Mail Options */});
 ```
 
-The difference between both is: `api2mailer` proxies your data to your `api2mailer-server` endpoint to send your mail.
+The difference between both is: `api2mailer` proxies your data to your `api2mailer-server` endpoint which then sends your mail on the remote server.

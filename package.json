@@ -6,8 +6,8 @@
   "repository": "https://github.com/trapcodeio/api2mailer-server.git",
   "author": "trapcodio",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node api2mailer.js",
+    "dev": "nodemon api2mailer.js"
   },
   "dependencies": {
     "@types/nodemailer": "^6.4.0",
